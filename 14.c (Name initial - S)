@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    int rows = 7; // Height of the letter S
+
+    for(i = 1; i <= rows; i++) {
+        if(i == 1 || i == rows || i == (rows / 2) + 1) {
+            // Print full row of stars for top, middle, bottom
+            for(j = 1; j <= 5; j++) {
+                printf("*");
+            }
+        } else if(i < (rows / 2) + 1) {
+            // Upper part of S, print star at beginning of row
+            printf("*");
+        } else {
+            // Lower part of S, print star at end of row
+            for(j = 1; j < 5; j++)
+                printf(" ");
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
